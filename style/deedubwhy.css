@@ -1,0 +1,306 @@
+/*deedubwhy.css v0.1*/
+html {
+	font-family: sans-serif;
+	background-color: #FFF;
+}
+
+/*reset body css*/
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*let our images take up their divs*/
+img {
+	width: 100%;
+	float: left;
+}
+
+/*grid*/
+.grid-container {
+	width: 960px;
+	margin: auto;
+}
+
+.grid-fluid {
+	width: 100%;
+	overflow: auto;
+}
+
+/*rows go in grids*/
+.row {
+	clear: both;
+	overflow: auto;
+}
+
+/*columns go in rows*/
+.col-11 {
+	width: 91.66663%;
+	float: left;
+}
+
+.offset-11 {
+	margin-left: 91.66663%;
+}
+
+.col-10 {
+	width: 83.33333%;
+	float: left;
+}
+
+.offset-10 {
+	margin-left: 83.33333%;
+}
+
+.col-9 {
+	width: 75%;
+	float: left;
+}
+
+.offset-9{
+	margin-left: 75%;
+}
+
+.col-8 {
+	width: 66.66664%;
+	float: left;
+}
+
+.offset-8 {
+	margin-left: 66.66664%;
+}
+
+.col-7 {
+	width: 58.33333%;
+	float: left;
+}
+
+.offset-7 {
+	margin-left: 58.33333%;
+}
+
+.col-6 {
+	width: 50%;
+	float: left;
+}
+
+.offset-6 {
+	margin-left: 50%;
+}
+
+.col-5 {
+	width: 41.666665%;
+	float: left;
+}
+
+.offset-5 {
+	margin-left: 41.666665%;
+}
+
+.col-4 {
+	width: 33.333333%;
+	float: left;
+}
+
+.offset-4 {
+	margin-left: 33.333333%;
+}
+
+.col-3 {
+	width: 25%;
+	float: left;
+}
+
+.offset-3 {
+	margin-left: 25%;
+}
+
+.col-2 {
+	width: 16.666666%;
+	float: left;
+}
+
+.offset-2 {
+	margin-left: 16.666666%;
+}
+
+.col-1 {
+	width: 8.333333%;
+	float: left;
+}
+
+.offset-1 {
+	margin-left: 8.333333%;
+}
+/*end grid*/
+
+/*general card for holding info*/
+.card {
+	width: 93%;
+	margin: auto;
+	background-color: #a3b1b2;
+}
+
+/*pushes our cards apart*/
+.card-in {
+	margin: 15px 0 15px 0;
+}
+
+/*give a div some margins*/
+.margins {
+	margin: 10px;
+}
+
+.border-effect {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.banner-text {
+	width: 100%;
+	font-size: 1.1em;
+	color: #FFF;
+	font-style: italic;
+}
+
+/*start text style*/
+
+h1 {
+	font-size: 3rem;
+	margin-top: 50px;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-top: 50px;
+}
+
+.text {
+	width: 100%;
+	font-size: 1.2em;
+	color: #FFF;
+	display: inline-block;
+}
+
+/*colours*/
+.blue-bg {
+	background-color: #2980b9;
+}
+
+.darker-bg {
+	background-color: #ecf0f1;
+}
+
+/*some overrides*/
+.push-down {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+a {
+	color: #FFF;
+}
+
+ol {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0;
+}
+	ol li {
+		font-size: 1.1em;
+		font-family: helvetica;
+		text-align: center;
+		width: 16.66666%;
+		float: left;
+		color: #FFF;
+	}
+
+/*forms*/
+input[type=text] {
+	width: 90%;
+	padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 1.3em;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+	width: 90%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	font-size: 1em;
+	border: 1px solid #ccc;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: rgb(22,188,156);
+    color: white;
+    padding: 14px 20px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    width: 100%;
+    background-color: rgb(186, 242, 255);
+    color: black;
+    padding: 14px 20px;
+    font-size: 1.3em;
+    border: solid 1px red;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+	background-color: rgb(22,188,156);
+	color: #FFF;
+}
+
+input[type=submit]:hover {
+	background-color: blue;
+}
+
+/*lets shrink once we're small*/
+@media screen and (max-width: 960px) {
+	.grid-container {width: 100%;}
+}
+/*typical media query for phones*/
+@media screen and (max-width: 550px) {
+	.col-1 {width: 100%;}
+	.col-2 {width: 100%;}
+	.col-3 {width: 100%;}
+	.col-4 {width: 100%;}
+	.col-5 {width: 100%;}
+	.col-6 {width: 100%;}
+	.col-7 {width: 100%;}
+	.col-8 {width: 100%;}
+	.col-9 {width: 100%;}
+	.col-10 {width: 100%;}
+	.col-11 {width: 100%;}
+	.offset-1 {margin-left: 0}
+	.offset-2 {margin-left: 0}
+	.offset-3 {margin-left: 0}
+	.offset-4 {margin-left: 0}
+	.offset-5 {margin-left: 0}
+	.offset-6 {margin-left: 0}
+	.offset-7 {margin-left: 0}
+	.offset-8 {margin-left: 0}
+	.offset-9 {margin-left: 0}
+	.offset-10 {margin-left: 0}
+	.offset-11 {margin-left: 0}
+}
