@@ -22,18 +22,23 @@ $(document).ready(function() {
 			$("#title-response").text(data.items[0].title);
 			$("#title-url").html('<a class="answer" href="'+data.items[0].link+'">'+data.items[0].link+'</a>');
 			console.log("found question id "+id);
-			var questToAnswer = "https://api.stackexchange.com/2.2/questions/"+id+"/answers?order=desc&sort=activity&site=stackoverflow"
+			var questToAnswer = "https://api.stackexchange.com/2.2/questions/"+id+"/answers?order=desc&sort=activity&site=stackoverflow";
 			//use that question id to find an answer id
 			$.getJSON(questToAnswer, function(data) {
 				console.log(data);
-				var id = data.items[0].answer_id;
-				console.log("found answer id "+id);
-				var answerBody ="https://api.stackexchange.com/2.2/answers/"+id+"?order=desc&sort=activity&site=stackoverflow&filter=withbody";
-				//take that answer id and find a chunk of text associated with it
-				$.getJSON(answerBody, function(data) {
-					console.log(data);
-					$("#response").html(data.items[0].body);
-				})
+				if (data.items[0]) {
+					var id = data.items[0].answer_id;
+					console.log("found answer id "+id);
+					var answerBody ="https://api.stackexchange.com/2.2/answers/"+id+"?order=desc&sort=activity&site=stackoverflow&filter=withbody";
+					//take that answer id and find a chunk of text associated with it
+					$.getJSON(answerBody, function(data) {
+						console.log(data);
+						$("#response").html(data.items[0].body);
+					});
+				} else {
+					$("#response").text("There was no answer to this question :(");
+					return;
+				}
 			});
 		});
 	});
