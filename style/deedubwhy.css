@@ -1,4 +1,5 @@
-/*deedubwhy.css v0.1*/
+/* deedubwhy.github.io
+deedubwhy.css v0.1*/
 html {
 	font-family: sans-serif;
 	background-color: #FFF;
@@ -159,19 +160,39 @@ img {
 	width: 100%;
 	font-size: 1.1em;
 	color: #FFF;
-	font-style: italic;
+	margin: 20px 0;
 }
 
 /*start text style*/
 
 h1 {
 	font-size: 3rem;
-	margin-top: 50px;
+	font-weight: 100;
 }
 
 h2 {
+	font-size: 2.5rem;
+	font-weight: 100;
+}
+
+h3 {
 	font-size: 2rem;
-	margin-top: 50px;
+	font-weight: 100;
+}
+
+h4 {
+	font-size: 1.8rem;
+	font-weight: 100;
+}
+
+h5 {
+	font-size: 1.6rem;
+	font-weight: 100;
+}
+
+h6 {
+	font-size: 1.4rem;
+	font-weight: 100;
 }
 
 .text {
@@ -179,6 +200,18 @@ h2 {
 	font-size: 1.2em;
 	color: #FFF;
 	display: inline-block;
+}
+
+a {
+	color: #FFF;
+}
+
+a:hover {
+	color: #2ecc71;
+}
+
+.answer {
+	color: #000;
 }
 
 /*colours*/
@@ -202,10 +235,6 @@ h2 {
 
 .align-right {
 	text-align: right;
-}
-
-a {
-	color: #FFF;
 }
 
 ol {
@@ -255,7 +284,7 @@ input[type=submit] {
 
 button {
     width: 100%;
-    background-color: rgb(186, 242, 255);
+    background-color: inherit;
     color: black;
     padding: 14px 20px;
     font-size: 1.3em;
@@ -267,7 +296,7 @@ button {
 }
 
 button:hover {
-	background-color: rgb(22,188,156);
+	background-color: #3498db;
 	color: #FFF;
 }
 

@@ -2,38 +2,49 @@
 <head>
 	<!--Looking at the source code I see, thanks for being so interested!-->
 	<meta charset="utf-8"> 
-	<meta name="description" content="deedubwhy.css introduction to media queries">
-	<meta name="keywords" content="responsive, grid">
+	<meta name="description" content="I'm Feeling Stacky! When you can't be bothered searching stack overflow yourself.">
+	<meta name="keywords" content="im, feeling, stacky">
 	<meta name="robots" content="index,follow">
 	<meta content = "find a stack overflow response" name="Description">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>feeling stacky</title>
 	<link rel='stylesheet' href='style/deedubwhy.css'/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/main.js"></script>
 </head>
 <body>
-	<div class="grid-container">
-		<div class="row">
-			<h1 class="align-center">Feeling Stacky?</h1>
-		</div>
-		<div class="row">
-
-		</div>
-		<div class="row">
-			<input type="text" name="searching" maxlength="124" placeholder="search for">
-		</div>
-		<div class="row">
-			<div class="col-3">
-				<button id="search" type="button">FIND IT NAO</button>
+	<div class="grid-fluid">
+		<div class="row blue-bg">
+			<div class="banner-text align-center">
+				Made by <a href="https://davidyoung.tech">www.davidyoung.tech</a>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-9">
-				<div id="response">
+		<div class="grid-container">
+			<div class="row">
+				<h1 class="align-center">I'm Feeling Stacky</h1>
+			</div>
+			<div class="row">
+				<div class="col-9">
+					<h3>What do you need to know right now?</h3>
+					<p>I made this as an example of multiple API callbacks to search for more in depth data.</p>
+					<p>We make a series of calls to the stackexchange api to find the top answer to the most relevant question asked.</p>
+					<input type="text" name="searching" maxlength="124" placeholder="search for">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<button id="search" type="button">I'm Feeling Stacky</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-9">
+					<h4 class="response-field" id="title-response"></h4>
+					<div class="response-field" id="title-url"></div>
+					<div class="response-field" id="response"></div>
 				</div>
 			</div>
 		</div>
+		
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
