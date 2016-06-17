@@ -2,12 +2,12 @@
 <head>
 	<!--Looking at the source code I see, thanks for being so interested!-->
 	<meta charset="utf-8"> 
-	<meta name="description" content="I'm Feeling Stacky! When you can't be bothered searching stack overflow yourself.">
+	<meta name="description" content="I'm Feeling Stacky! When you can't be bothered searching stack overflow yourself, just yolo it.">
 	<meta name="keywords" content="im, feeling, stacky">
 	<meta name="robots" content="index,follow">
-	<meta content = "find a stack overflow response" name="Description">
+	<meta content = "I'm Feeling Stacky! When you can't be bothered searching stack overflow yourself, just yolo it." name="Description">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>feeling stacky</title>
+	<title>Feeling Stacky</title>
 	<link rel='stylesheet' href='style/deedubwhy.css'/>
 </head>
 <body>
@@ -25,8 +25,12 @@
 				<div class="col-8 offset-2">
 					<h3 class="align-center">What do you need to know right now?</h3>
 					<p class="align-center">I made this as an example of multiple API callbacks to search for more in depth data.</p>
-					<p class="align-center">We make a series of calls to the stackexchange api to find the top answer to the most relevant question asked.</p>
-					<input type="text" name="searching" maxlength="124" placeholder="search for">
+					<p class="align-center">Do not phrase your query as a question, only include keywords.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8 offset-2">
+					<input type="text" name="searching" maxlength="124" placeholder="Just tell me the answer to..">
 				</div>
 			</div>
 			<div class="row">
@@ -41,15 +45,16 @@
 					<div class="response-field" id="response"></div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="tiny-text">
-				This site is not affiliated with stackexchange or any of its relevant websites.
+
+			<div class="row">
+				<div class="tiny-text">
+					This site is not affiliated with stackexchange or any of its relevant websites.
+				</div>
 			</div>
 		</div>
-
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/main.js">
+	</script>
 </body>
 </html>

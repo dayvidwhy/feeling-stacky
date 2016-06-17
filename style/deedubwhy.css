@@ -296,7 +296,7 @@ button {
 	color: black;
 	padding: 14px 20px;
 	font-size: 1.3em;
-	border: solid 1px red;
+	border: solid 1px #2980b9;
 	border-radius: 4px;
 	cursor: pointer;
 	margin-bottom: 10px;
@@ -321,35 +321,12 @@ input[type=submit]:hover {
 }
 /*typical media query for phones*/
 @media screen and (max-width: 768px) {
-	h1 {
-		font-size: 2rem;
-		font-weight: 100;
-	}
-
-	h2 {
-		font-size: 1.7rem;
-		font-weight: 100;
-	}
-
-	h3 {
-		font-size: 1.5rem;
-		font-weight: 100;
-	}
-
-	h4 {
-		font-size: 1.3rem;
-		font-weight: 100;
-	}
-
-	h5 {
-		font-size: 1.2rem;
-		font-weight: 100;
-	}
-
-	h6 {
-		font-size: 1rem;
-		font-weight: 100;
-	}
+	h1 {font-size: 2rem;}
+	h2 {font-size: 1.7rem;}
+	h3 {font-size: 1.5rem;}
+	h4 {font-size: 1.3rem;}
+	h5 {font-size: 1.2rem;}
+	h6 {font-size: 1rem;}
 	.col-1 {width: 100%;}
 	.col-2 {width: 100%;}
 	.col-3 {width: 100%;}

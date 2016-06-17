@@ -20,12 +20,12 @@ $(document).ready(function() {
 		$("#response").text("Finding your answer");
 		search = search.split(' ').join('%20');
 		console.log(search);
-		var query = "https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&q="
-		+search+"&site=stackoverflow";
+		var query = "https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&title="
+		+search+"&accepted=True&site=stackoverflow";
 		//query for a question id that goes with the query
 		$.getJSON(query, function(data){
 			console.log(data);
-			if (data.items[0].question_id) {
+			if (data.items.length > 0) {
 				var id = data.items[0].question_id;
 				$("#title-response").text(data.items[0].title);
 				$("#title-url").html('<a class="answer" href="'+data.items[0].link+'">'+data.items[0].link+'</a>');
@@ -49,7 +49,7 @@ $(document).ready(function() {
 						}
 					});
 			} else {
-				$("#response").text("There was no question to this question :(");
+				$("#response").text("There was no question for this search.");
 					return;
 				}
 			});
