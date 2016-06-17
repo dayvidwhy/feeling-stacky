@@ -14,7 +14,7 @@
 	<div class="grid-fluid">
 		<div class="row blue-bg">
 			<div class="banner-text align-center">
-				Made by <a href="https://davidyoung.tech">www.davidyoung.tech</a>
+				Made by <a class="banner-link" href="https://davidyoung.tech">www.davidyoung.tech</a>
 			</div>
 		</div>
 		<div class="grid-container">
@@ -22,27 +22,32 @@
 				<h1 class="align-center">I'm Feeling Stacky</h1>
 			</div>
 			<div class="row">
-				<div class="col-9">
-					<h3>What do you need to know right now?</h3>
-					<p>I made this as an example of multiple API callbacks to search for more in depth data.</p>
-					<p>We make a series of calls to the stackexchange api to find the top answer to the most relevant question asked.</p>
+				<div class="col-8 offset-2">
+					<h3 class="align-center">What do you need to know right now?</h3>
+					<p class="align-center">I made this as an example of multiple API callbacks to search for more in depth data.</p>
+					<p class="align-center">We make a series of calls to the stackexchange api to find the top answer to the most relevant question asked.</p>
 					<input type="text" name="searching" maxlength="124" placeholder="search for">
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-3">
+				<div class="col-3 offset-2">
 					<button id="search" type="button">I'm Feeling Stacky</button>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-9">
+				<div class="col-8 offset-2">
 					<h4 class="response-field" id="title-response"></h4>
 					<div class="response-field" id="title-url"></div>
 					<div class="response-field" id="response"></div>
 				</div>
 			</div>
 		</div>
-		
+		<div class="row">
+			<div class="tiny-text">
+				This site is not affiliated with stackexchange or any of its relevant websites.
+			</div>
+		</div>
+
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/main.js"></script>
