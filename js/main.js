@@ -1,10 +1,4 @@
 $(document).ready(function() {
-	//bind enter to our button
-	$(document).keypress(function(button){
-		if (button.which == 13){
-			$("#search").click();
-		}
-	});
 	
 	//this binds a more lenient query to the serious button
 	$("#luckySearch").click({type: "q"},query);
