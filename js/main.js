@@ -5,23 +5,30 @@ $(document).ready(function() {
 			$("#search").click();
 		}
 	});
+	
+	//this binds a more lenient query to the serious button
+	$("#luckySearch").click({type: "q"},query);
+	//this binds a more literal query to lucky button
+	$("#srsSearch").click({type: "title"},query);
 
-	$("#search").click(function() {
+	function query(event) {
+		console.log(event.data.type);
 		//allow people to search again
 		$(".response-field").empty();
 		var search = $('input[name=searching]').val();
-
 		//stop asking dumb questions
 		if (search === '' || search === null) {
 			$("#response").text("You should ask me something.");
 			return;
 		}
+		
 		//let them know we're off finding a solution
 		$("#response").text("Finding your answer");
 		search = search.split(' ').join('%20');
 		console.log(search);
-		var query = "https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&title="
+		var query = "https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&"+event.data.type+"="
 		+search+"&accepted=True&site=stackoverflow";
+		
 		//query for a question id that goes with the query
 		$.getJSON(query, function(data){
 			console.log(data);
@@ -31,6 +38,7 @@ $(document).ready(function() {
 				$("#title-url").html('<a class="answer" href="'+data.items[0].link+'">'+data.items[0].link+'</a>');
 				console.log("found question id "+id);
 				var questToAnswer = "https://api.stackexchange.com/2.2/questions/"+id+"/answers?order=desc&sort=activity&site=stackoverflow";
+
 				//use that question id to find an answer id
 				$.getJSON(questToAnswer, function(data) {
 					console.log(data);
@@ -38,6 +46,7 @@ $(document).ready(function() {
 						var id = data.items[0].answer_id;
 						console.log("found answer id "+id);
 						var answerBody ="https://api.stackexchange.com/2.2/answers/"+id+"?order=desc&sort=activity&site=stackoverflow&filter=withbody";
+						
 						//take that answer id and find a chunk of text associated with it
 						$.getJSON(answerBody, function(data) {
 							console.log(data);
@@ -50,8 +59,8 @@ $(document).ready(function() {
 					});
 			} else {
 				$("#response").text("There was no question for this search.");
-					return;
-				}
-			});
+				return;
+			}
+		});
+	}
 });
-}); //hadouken
