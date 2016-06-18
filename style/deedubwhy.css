@@ -291,7 +291,7 @@ input[type=submit] {
 }
 
 button {
-	width: 100%;
+	width: 98%;
 	background-color: inherit;
 	color: black;
 	padding: 14px 20px;
@@ -327,6 +327,7 @@ input[type=submit]:hover {
 	h4 {font-size: 1.3rem;}
 	h5 {font-size: 1.2rem;}
 	h6 {font-size: 1rem;}
+	button{width: 100%;}
 	.col-1 {width: 100%;}
 	.col-2 {width: 100%;}
 	.col-3 {width: 100%;}
