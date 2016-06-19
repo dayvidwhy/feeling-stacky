@@ -30,6 +30,7 @@ $(document).ready(function() {
 				var id = data.items[0].accepted_answer_id;
 				console.log("found answer id "+id);
 				$("#title-response").text(data.items[0].title);
+				$("#title-url").html("<a href=\""+data.items[0].link+"\">"+data.items[0].link+"</a>");
 				var answerBody ="https://api.stackexchange.com/2.2/answers/"+id+"?order=desc&sort=activity&site=stackoverflow&filter=withbody";
 				//take that answer id and find a chunk of text associated with it
 				$.getJSON(answerBody, function(data) {
