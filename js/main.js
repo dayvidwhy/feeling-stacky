@@ -23,37 +23,23 @@ $(document).ready(function() {
 		var query = "https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&"+event.data.type+"="
 		+search+"&accepted=True&site=stackoverflow";
 		
-		//query for a question id that goes with the query
+		//query for an accepted answer id that goes with the query
 		$.getJSON(query, function(data){
 			console.log(data);
 			if (data.items.length > 0) {
-				var id = data.items[0].question_id;
+				var id = data.items[0].accepted_answer_id;
+				console.log("found answer id "+id);
 				$("#title-response").text(data.items[0].title);
-				$("#title-url").html('<a class="answer" href="'+data.items[0].link+'">'+data.items[0].link+'</a>');
-				console.log("found question id "+id);
-				var questToAnswer = "https://api.stackexchange.com/2.2/questions/"+id+"/answers?order=desc&sort=activity&site=stackoverflow";
-
-				//use that question id to find an answer id
-				$.getJSON(questToAnswer, function(data) {
+				var answerBody ="https://api.stackexchange.com/2.2/answers/"+id+"?order=desc&sort=activity&site=stackoverflow&filter=withbody";
+				//take that answer id and find a chunk of text associated with it
+				$.getJSON(answerBody, function(data) {
 					console.log(data);
-					if (data.items[0]) {
-						var id = data.items[0].answer_id;
-						console.log("found answer id "+id);
-						var answerBody ="https://api.stackexchange.com/2.2/answers/"+id+"?order=desc&sort=activity&site=stackoverflow&filter=withbody";
-						
-						//take that answer id and find a chunk of text associated with it
-						$.getJSON(answerBody, function(data) {
-							console.log(data);
-							$("#response").html(data.items[0].body);
-						});
-					} else {
-						$("#response").text("There was no answer to this question :(");
-							return;
-						}
-					});
+					$("#response").html(data.items[0].body);
+					return;
+				});
 			} else {
-				$("#response").text("There was no question for this search.");
-				return;
+				$("#response").text("There was no answer to this question :(");
+					return;
 			}
 		});
 	}

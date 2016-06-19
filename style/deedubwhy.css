@@ -327,11 +327,10 @@ input[type=submit]:hover {
 	h4 {font-size: 1.3rem;}
 	h5 {font-size: 1.2rem;}
 	h6 {font-size: 1rem;}
-	button{width: 100%;}
 	.col-1 {width: 100%;}
 	.col-2 {width: 100%;}
 	.col-3 {width: 100%;}
-	.col-4 {width: 100%;}
+	.col-4 {width: 50%;}
 	.col-5 {width: 100%;}
 	.col-6 {width: 100%;}
 	.col-7 {width: 100%;}
@@ -350,4 +349,9 @@ input[type=submit]:hover {
 	.offset-9 {margin-left: 0}
 	.offset-10 {margin-left: 0}
 	.offset-11 {margin-left: 0}
+}
+
+@media screen and (max-width: 550px){
+	button{width: 100%;}
+	.col-4 {width: 100%;}
 }
