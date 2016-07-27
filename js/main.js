@@ -27,6 +27,7 @@ $(document).ready(function() {
 		$.getJSON(query, function(data){
 			console.log(data);
 			if (data.items.length > 0) {
+				//we need the id of the top answer, this is the first element of the items array.
 				var id = data.items[0].accepted_answer_id;
 				console.log("found answer id "+id);
 				$("#title-response").text(data.items[0].title);
