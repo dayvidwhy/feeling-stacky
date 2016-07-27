@@ -12,12 +12,12 @@ $(document).ready(function() {
 		var search = $('input[name=searching]').val();
 		//stop asking dumb questions
 		if (search === '' || search === null) {
-			$("#response").text("You should ask me something.");
+			$("#title-response").text("You should ask me something.");
 			return;
 		}
 		
 		//let them know we're off finding a solution
-		$("#response").text("Finding your answer");
+		$("#title-response").text("Finding your answer");
 		search = search.split(' ').join('%20');
 		console.log(search);
 		var query = "https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&"+event.data.type+"="

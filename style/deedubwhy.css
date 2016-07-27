@@ -19,7 +19,7 @@ img {
 
 /*grid*/
 .grid-container {
-	width: 960px;
+	width: 1024px;
 	margin: auto;
 }
 
@@ -214,6 +214,12 @@ h6 {
 	color: #000;
 }
 
+.responses {
+	background-color: #ecf0f1;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
 /*colours*/
 .blue-bg {
 	background-color: #2980b9;
@@ -295,7 +301,7 @@ button {
 	background-color: inherit;
 	color: black;
 	padding: 14px 20px;
-	font-size: 1.3em;
+	font-size: 1em;
 	border: solid 1px #2980b9;
 	border-radius: 4px;
 	cursor: pointer;
@@ -308,12 +314,20 @@ button:hover {
 	color: #FFF;
 }
 
+button:focus {
+	outline: 0;
+}
+
+pre, code {
+	box-sizing: border-box;
+}
+
 input[type=submit]:hover {
 	background-color: blue;
 }
 
 /*lets shrink once we're small*/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
 	.grid-container {
 		width: 95%;
 		margin: auto;
@@ -322,6 +336,7 @@ input[type=submit]:hover {
 /*typical media query for phones*/
 @media screen and (max-width: 768px) {
 	h1 {font-size: 2rem;}
+	
 	h2 {font-size: 1.7rem;}
 	h3 {font-size: 1.5rem;}
 	h4 {font-size: 1.3rem;}
@@ -329,7 +344,7 @@ input[type=submit]:hover {
 	h6 {font-size: 1rem;}
 	.col-1 {width: 100%;}
 	.col-2 {width: 100%;}
-	.col-3 {width: 100%;}
+	.col-3 {width: 50%;}
 	.col-4 {width: 50%;}
 	.col-5 {width: 100%;}
 	.col-6 {width: 100%;}
@@ -353,5 +368,5 @@ input[type=submit]:hover {
 
 @media screen and (max-width: 550px){
 	button{width: 100%;}
-	.col-4 {width: 100%;}
+	.col-3 {width: 100%;}
 }
