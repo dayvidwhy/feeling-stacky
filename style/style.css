@@ -1,5 +1,7 @@
-/* deedubwhy.github.io
-deedubwhy.css v0.1*/
+/* 
+http://daygrid.dwy.io
+daygrid.css v0.1
+*/
 html {
 	font-family: sans-serif;
 	background-color: #FFF;
@@ -11,11 +13,10 @@ body {
 	padding: 0;
 }
 
-/*let our images take up their divs*/
-img {
+svg {
 	width: 20%;
-	margin-top: 20px;
-	display: inline-block;
+	margin-top: 10px;
+	fill: rgb(244, 165, 3);
 }
 
 /*grid*/
@@ -36,31 +37,9 @@ img {
 }
 
 /*columns go in rows*/
-.col-11 {
-	width: 91.66663%;
-	float: left;
-}
-
-.offset-11 {
-	margin-left: 91.66663%;
-}
-
 .col-10 {
 	width: 83.33333%;
 	float: left;
-}
-
-.offset-10 {
-	margin-left: 83.33333%;
-}
-
-.col-9 {
-	width: 75%;
-	float: left;
-}
-
-.offset-9{
-	margin-left: 75%;
 }
 
 .col-8 {
@@ -68,44 +47,9 @@ img {
 	float: left;
 }
 
-.offset-8 {
-	margin-left: 66.66664%;
-}
-
-.col-7 {
-	width: 58.33333%;
-	float: left;
-}
-
-.offset-7 {
-	margin-left: 58.33333%;
-}
-
 .col-6 {
 	width: 50%;
 	float: left;
-}
-
-.offset-6 {
-	margin-left: 50%;
-}
-
-.col-5 {
-	width: 41.666665%;
-	float: left;
-}
-
-.offset-5 {
-	margin-left: 41.666665%;
-}
-
-.col-4 {
-	width: 33.333333%;
-	float: left;
-}
-
-.offset-4 {
-	margin-left: 33.333333%;
 }
 
 .col-3 {
@@ -117,45 +61,14 @@ img {
 	margin-left: 25%;
 }
 
-.col-2 {
-	width: 16.666666%;
-	float: left;
-}
-
 .offset-2 {
 	margin-left: 16.666666%;
-}
-
-.col-1 {
-	width: 8.333333%;
-	float: left;
 }
 
 .offset-1 {
 	margin-left: 8.333333%;
 }
 /*end grid*/
-
-/*general card for holding info*/
-.card {
-	width: 93%;
-	margin: auto;
-	background-color: #a3b1b2;
-}
-
-/*pushes our cards apart*/
-.card-in {
-	margin: 15px 0 15px 0;
-}
-
-/*give a div some margins*/
-.margins {
-	margin: 10px;
-}
-
-.border-effect {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
 
 .banner-text {
 	width: 100%;
@@ -165,35 +78,28 @@ img {
 }
 
 /*start text style*/
-
+h1,h2,h3,h4,h5 {
+	font-weight: 100;
+}
 h1 {
 	font-size: 3rem;
-	font-weight: 100;
 }
 
 h2 {
 	font-size: 2.5rem;
-	font-weight: 100;
 }
 
 h3 {
 	font-size: 2rem;
-	font-weight: 100;
+	margin-top: 0;
 }
 
 h4 {
 	font-size: 1.8rem;
-	font-weight: 100;
 }
 
 h5 {
 	font-size: 1.6rem;
-	font-weight: 100;
-}
-
-h6 {
-	font-size: 1.4rem;
-	font-weight: 100;
 }
 
 .text {
@@ -251,20 +157,6 @@ h6 {
 	text-align: center;
 }
 
-ol {
-	list-style-type: none;
-	overflow: hidden;
-	padding: 0;
-}
-ol li {
-	font-size: 1.1em;
-	font-family: helvetica;
-	text-align: center;
-	width: 16.66666%;
-	float: left;
-	color: #FFF;
-}
-
 /*forms*/
 input[type=text] {
 	width: 100%;
@@ -273,14 +165,6 @@ input[type=text] {
 	font-size: 1.3em;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-}
-
-textarea {
-	width: 90%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	font-size: 1em;
-	border: 1px solid #ccc;
 }
 
 input[type=submit] {
@@ -342,29 +226,13 @@ input[type=submit]:hover {
 	h3 {font-size: 1.5rem;}
 	h4 {font-size: 1.3rem;}
 	h5 {font-size: 1.2rem;}
-	h6 {font-size: 1rem;}
-	.col-1 {width: 100%;}
-	.col-2 {width: 100%;}
 	.col-3 {width: 50%;}
-	.col-4 {width: 50%;}
-	.col-5 {width: 100%;}
 	.col-6 {width: 100%;}
-	.col-7 {width: 100%;}
-	.col-8 {width: 100%;}
 	.col-9 {width: 100%;}
 	.col-10 {width: 100%;}
-	.col-11 {width: 100%;}
 	.offset-1 {margin-left: 0}
 	.offset-2 {margin-left: 0}
 	.offset-3 {margin-left: 0}
-	.offset-4 {margin-left: 0}
-	.offset-5 {margin-left: 0}
-	.offset-6 {margin-left: 0}
-	.offset-7 {margin-left: 0}
-	.offset-8 {margin-left: 0}
-	.offset-9 {margin-left: 0}
-	.offset-10 {margin-left: 0}
-	.offset-11 {margin-left: 0}
 }
 
 @media screen and (max-width: 550px){
