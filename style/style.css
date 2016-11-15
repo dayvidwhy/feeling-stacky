@@ -13,6 +13,10 @@ body {
 	padding: 0;
 }
 
+main {
+	display: block;
+}
+
 svg {
 	width: 20%;
 	margin-top: 10px;
@@ -28,6 +32,11 @@ svg {
 .grid-fluid {
 	width: 100%;
 	overflow: auto;
+}
+
+/*general card for holding info*/
+.card {
+	margin: 15px 10px;
 }
 
 /*rows go in grids*/
