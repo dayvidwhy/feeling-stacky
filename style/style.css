@@ -2,15 +2,22 @@
 http://daygrid.dwy.io
 daygrid.css v0.1
 */
+*, *:after, *:before {
+	box-sizing: inherit;
+}
+
 html {
 	font-family: sans-serif;
 	background-color: #FFF;
+	box-sizing: border-box;
 }
 
 /*reset body css*/
 body {
 	margin: 0;
 	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 main {
@@ -88,7 +95,7 @@ svg {
 
 /*start text style*/
 h1,h2,h3,h4,h5 {
-	font-weight: 100;
+	font-weight: 400;
 }
 h1 {
 	font-size: 3rem;
@@ -160,9 +167,8 @@ h5 {
 }
 
 .tiny-text {
-	margin: 10px;
-	font-size: 0.5em;
 	width: 100%;
+	font-weight: 400;
 	text-align: center;
 }
 
@@ -173,20 +179,8 @@ input[type=text] {
 	margin: 8px 0;
 	font-size: 1.3em;
 	border: 1px solid #ccc;
+	font-weight: 400;
 	box-sizing: border-box;
-}
-
-input[type=submit] {
-	width: 100%;
-	background-color: rgb(22,188,156);
-	color: white;
-	padding: 14px 20px;
-	font-size: 1.3em;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	margin-bottom: 10px;
-	transition: all 0.2s ease-in-out;
 }
 
 button {
