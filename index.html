@@ -74,10 +74,15 @@
 			</div>
 		</div>
 	</footer>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script defer type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function(){function a(a){$(".response-field").empty();var b=$("input[name=searching]").val();if(""===b||null===b)return void $("#title-response").text("You should ask me something.");$("#title-response").text("Finding your answer"),b=b.split(" ").join("%20");var c="https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&"+a.data.type+"="+b+"&accepted=True&site=stackoverflow";$.getJSON(c,function(a){if(!(a.items.length>0))return void $("#response").text("There was no answer to this question :(");var b=a.items[0].accepted_answer_id;$("#title-response").text(a.items[0].title),$("#title-url").html('<a href="'+a.items[0].link+'">'+a.items[0].link+"</a>");var c="https://api.stackexchange.com/2.2/answers/"+b+"?order=desc&sort=activity&site=stackoverflow&filter=withbody";$.getJSON(c,function(a){$("#response").html(a.items[0].body)})})}$("#lucky").click({type:"q"},a),$("#serious").click({type:"title"},a)});
-		</script>
-	</body>
-	</html>
+		(function(d,a,y,o,u,n,g){d['GoogleAnalyticsObject']=u;d[u]=d[u]||function(){
+			(d[u].q=d[u].q||[]).push(arguments)},d[u].l=1*new Date();n=a.createElement(y),
+			g=a.getElementsByTagName(y)[0];n.async=1;n.src=o;g.parentNode.insertBefore(n,g)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-78898363-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>
