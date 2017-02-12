@@ -20,6 +20,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* hack for IE */
 main {
 	display: block;
 }
