@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/dayvidwhy/feeling-stacky.svg?branch=master)](https://travis-ci.org/dayvidwhy/feeling-stacky)
 # I'm Feeling Stacky
 An example of multiple API callbacks to search for more in depth data from an online API endpoint.
 
