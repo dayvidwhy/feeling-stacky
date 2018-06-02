@@ -76,14 +76,6 @@ import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
 
 export default {
 	name: "searcher",
-	components: {
-
-	},
-	data () {
-		return {
-		
-		};
-	},
 	computed: {
 		...mapState([
 			"searchingFor"

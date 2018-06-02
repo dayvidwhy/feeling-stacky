@@ -21,18 +21,14 @@ export default {
         "searcher": searcher,
         "credits": credits
     },
-    data () {
-        return {
-
-        };
-    },
     mounted () {
+        // only call analytics when we mount correctly
         (function(d,a,y,o,u,n,g){d['GoogleAnalyticsObject']=u;d[u]=d[u]||function(){
             (d[u].q=d[u].q||[]).push(arguments)},d[u].l=1*new Date();n=a.createElement(y),
             g=a.getElementsByTagName(y)[0];n.async=1;n.src=o;g.parentNode.insertBefore(n,g)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-90329277-1', 'auto');
-        ga('send', 'pageview');
+        ga('create', 'UA-90329277-1', 'auto'); // eslint-disable-line no-undef
+        ga('send', 'pageview'); // eslint-disable-line no-undef
     }
 };
 </script>

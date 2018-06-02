@@ -1,5 +1,4 @@
 <style>
-
 </style>
 
 <template>
@@ -12,12 +11,6 @@
 
 <script>
 export default {
-	name: "banner",
-	components: {},
-	data () {
-		return {
-
-		};
-	}
+	name: "banner"
 };
 </script>

@@ -9,7 +9,7 @@ export default new Vuex.Store({
         searchingFor: "",
         searchType: "q",
         response: {
-            title: "",
+            title: "Ready to search.",
             url: "",
             field: ""
         }
@@ -65,12 +65,15 @@ export default new Vuex.Store({
                 state.response.title = "You should ask me something.";
                 return;
             }
+
             // get from stackexchange
             let query = "https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&"
                 + state.searchType
                 + "="
                 + state.searchingFor
                 + "&accepted=True&site=stackoverflow";
+
+            // fetch answers
             axios.get(query)
                 .then((response) => {
                     // were there any responses
@@ -84,19 +87,22 @@ export default new Vuex.Store({
                     commit("SET_TITLE", answer.title);
                     commit("SET_URL", answer.link);
 
+                    // construct answer url
                     let answerBodyUrl = "https://api.stackexchange.com/2.2/answers/"
                         + answer.accepted_answer_id
                         + "?order=desc&sort=activity&site=stackoverflow&filter=withbody";
+
+                    // fetch answer
                     axios.get(answerBodyUrl)
                         .then((response) => {
                             commit("SET_FIELD", response.data.items[0].body);
                         })
-                        .catch((error) => {
-                            console.log(error);
+                        .catch(() => {
+                            commit("SET_FIELD", "Something went wrong getting the answer.");
                         });
                 })
-                .catch((error) => {
-                    console.log(error);
+                .catch(() => {
+                    commit("SET_TITLE", "Something went wrong getting some answers.")
                 });
         }
     }

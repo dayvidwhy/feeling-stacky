@@ -19,12 +19,6 @@
 
 <script>
 export default {
-	name: "credits",
-	components: {},
-	data () {
-		return {
-
-		};
-	}
+	name: "credits"
 };
 </script>
