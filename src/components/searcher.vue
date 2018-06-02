@@ -60,7 +60,7 @@
 						{{ getResponseTitle }}
 					</h4>
 					<div class="response-field">
-						{{ getResponseUrl }}
+						<a :href="getResponseUrl">{{ getResponseUrl }}</a>
 					</div>
 					<div class="response-field"
 						v-html="getResponseField">
