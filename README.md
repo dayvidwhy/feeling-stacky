@@ -12,8 +12,7 @@ Stack Overflow presents a large amount of information when you search for someth
 ## Technologies
 * HTML
 * CSS
-* JavaScript
-* jQuery
+* Vue
 
 ### To-Do
 * Improve search results
@@ -21,7 +20,7 @@ Stack Overflow presents a large amount of information when you search for someth
 * add some nicer styles
 
 ## Contributing
-Please create a github issue with your suggested change and submit a pull request against it for consideration.
+Please create a github issue with your suggested change and submit a pull request for consideration.
 
 ## Licence
 See the file `LICENSE` in the repository root directory.
