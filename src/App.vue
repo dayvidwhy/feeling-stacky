@@ -27,7 +27,7 @@ export default {
             (d[u].q=d[u].q||[]).push(arguments)},d[u].l=1*new Date();n=a.createElement(y),
             g=a.getElementsByTagName(y)[0];n.async=1;n.src=o;g.parentNode.insertBefore(n,g)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-90329277-1', 'auto'); // eslint-disable-line no-undef
+        ga('create', 'UA-78898363-1', 'auto'); // eslint-disable-line no-undef
         ga('send', 'pageview'); // eslint-disable-line no-undef
     }
 };
