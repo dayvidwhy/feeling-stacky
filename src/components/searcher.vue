@@ -29,6 +29,7 @@
 				<div class="card">
 					<input
 						v-model="search"
+						label="searcher"
 						type="text"
 						maxlength="124"
 						placeholder="Just tell me the answer to..">
