@@ -1,5 +1,6 @@
 <style src="./App.css">
 </style>
+
 <template>
     <div id="app">
         <banner />
@@ -7,7 +8,6 @@
         <credits />
     </div>
 </template>
-
 
 <script>
 import banner from "./components/banner.vue";

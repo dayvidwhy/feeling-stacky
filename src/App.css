@@ -223,6 +223,7 @@ input[type=submit]:hover {
         margin: auto;
     }
 }
+
 /*typical media query for phones*/
 @media screen and (max-width: 768px) {
     h1 {font-size: 2rem;}
