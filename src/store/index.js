@@ -7,7 +7,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         searchingFor: "",
-        searchType: "q",
+        searchType: "", 
         response: {
             title: "Ready to search.",
             url: "",
