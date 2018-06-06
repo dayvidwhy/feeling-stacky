@@ -74,6 +74,7 @@ export default new Vuex.Store({
                 + "&accepted=True&site=stackoverflow";
 
             // fetch answers
+            commit("SET_TITLE", "Getting some answers!");
             axios.get(query)
                 .then((response) => {
                     // were there any responses
@@ -102,7 +103,7 @@ export default new Vuex.Store({
                         });
                 })
                 .catch(() => {
-                    commit("SET_TITLE", "Something went wrong getting some answers.")
+                    commit("SET_TITLE", "Something went wrong getting some answers.");
                 });
         }
     }
