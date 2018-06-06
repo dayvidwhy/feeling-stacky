@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/dayvidwhy/feeling-stacky.svg?branch=master)](https://travis-ci.org/dayvidwhy/feeling-stacky)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f6eeaaaa71843f19746e04b2ea8716b)](https://www.codacy.com/app/dayvidwhy/feeling-stacky?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dayvidwhy/feeling-stacky&amp;utm_campaign=Badge_Grade)
 # I'm Feeling Stacky
+[![Build Status](https://travis-ci.org/dayvidwhy/feeling-stacky.svg?branch=master)](https://travis-ci.org/dayvidwhy/feeling-stacky)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f6eeaaaa71843f19746e04b2ea8716b)](https://www.codacy.com/app/dayvidwhy/feeling-stacky?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dayvidwhy/feeling-stacky&amp;utm_campaign=Badge_Grade)  
 An example of multiple API callbacks to search for more in depth data from an online API endpoint.
 
 ## Getting Started
