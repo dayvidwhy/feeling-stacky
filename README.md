@@ -1,21 +1,18 @@
-[![Build Status](https://travis-ci.org/dayvidwhy/feeling-stacky.svg?branch=master)](https://travis-ci.org/dayvidwhy/feeling-stacky)
 # I'm Feeling Stacky
-An example of multiple API callbacks to search for more in depth data from an online API endpoint.
+[![Build Status](https://travis-ci.org/dayvidwhy/feeling-stacky.svg?branch=master)](https://travis-ci.org/dayvidwhy/feeling-stacky)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f6eeaaaa71843f19746e04b2ea8716b)](https://www.codacy.com/app/dayvidwhy/feeling-stacky?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dayvidwhy/feeling-stacky&amp;utm_campaign=Badge_Grade)  
+An example of multiple calls to the [StackExchange API](https://api.stackexchange.com/) to find the top answer to the most relevant question asked.
 
-## Getting Started
+## Installation
+1. `git clone https://github.com/dayvidwhy/feeling-stacky.git`
+2. `cd feeling-stacky`
+3. `npm install`
+4. `npm serve`
 
-### What is this
-We make a series of calls to the [StackExchange API](https://api.stackexchange.com/) to find the top answer to the most relevant question asked.
-
-### Goals and Requirements
+## Goals
 Stack Overflow presents a large amount of information when you search for something, and I think overt ime the API search functionality can be extended to consider multiple answers and give the most appropriate one for the search.
 
-## Technologies
-* HTML
-* CSS
-* Vue
-
-### To-Do
+## To-Do
 * Improve search results
 * Learn more about stack-exchange api
 * Add some nicer styles
