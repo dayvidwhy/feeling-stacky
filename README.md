@@ -18,7 +18,7 @@ Stack Overflow presents a large amount of information when you search for someth
 ### To-Do
 * Improve search results
 * Learn more about stack-exchange api
-* add some nicer styles
+* Add some nicer styles
 
 ## Contributing
 Please create a github issue with your suggested change and submit a pull request for consideration.
