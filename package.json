@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js"
+    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages --output ."
   },
   "homepage": "https://github.com/dayvidwhy/feeling-stacky",
   "dependencies": {
