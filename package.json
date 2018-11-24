@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages --output ."
+    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages --output .",
+    "start": "vue-cli-service serve --open",
+    "test": "vue-cli-service test:unit"
   },
-  "homepage": "https://github.com/dayvidwhy/feeling-stacky",
   "dependencies": {
     "axios": "^0.18.0",
     "vue": "^2.5.16",
@@ -17,7 +17,11 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
+    "@vue/cli-plugin-unit-jest": "^3.1.1",
     "@vue/cli-service": "^3.0.0-beta.15",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "vue-gh-pages": "^1.16.0",
     "vue-template-compiler": "^2.5.16"
   },
@@ -44,5 +48,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "homepage": "https://github.com/dayvidwhy/feeling-stacky"
 }
