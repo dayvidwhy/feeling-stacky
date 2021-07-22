@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -75,16 +74,17 @@ export default new Vuex.Store({
 
             // fetch answers
             commit("SET_TITLE", "Getting some answers!");
-            axios.get(query)
-                .then((response) => {
+            fetch(query)
+                .then((response) => response.json())
+                .then((data) => {
                     // were there any responses
-                    if (response.data.items.length <= 0) {
+                    if (data.items.length <= 0) {
                         commit("SET_TITLE", "There was no answer to this question :(");
                         return;
                     }
                    
                     // take top answer
-                    let answer = response.data.items[0];
+                    let answer = data.items[0];
                     commit("SET_TITLE", answer.title);
                     commit("SET_URL", answer.link);
 
@@ -94,9 +94,10 @@ export default new Vuex.Store({
                         + "?order=desc&sort=activity&site=stackoverflow&filter=withbody";
 
                     // fetch answer
-                    axios.get(answerBodyUrl)
-                        .then((response) => {
-                            commit("SET_FIELD", response.data.items[0].body);
+                    fetch(answerBodyUrl)
+                        .then((response) => response.json())
+                        .then((data) => {
+                            commit("SET_FIELD", data.items[0].body);
                         })
                         .catch(() => {
                             commit("SET_FIELD", "Something went wrong getting the answer.");

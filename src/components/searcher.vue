@@ -9,7 +9,7 @@
 		</div>
 		<div class="row">
 			<h1 class="align-center">
-				I'm Feeling Stacky
+				Feeling Stacky
 			</h1>
 		</div>
 		<div class="row">
@@ -42,14 +42,14 @@
 					<button
 						v-on:click="luckySearch"
 						type="button">
-						I'm Feeling Stacky
+						Feeling Stacky
 					</button>
 				</div>
 				<div class="col-3 align-right">
 					<button
 						v-on:click="seriesSearch"
 						type="button">
-						I'm Feeling Serious
+						Feeling Serious
 					</button>
 				</div>
 			</div>
