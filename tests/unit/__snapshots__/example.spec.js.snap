@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`banner.vue renders correctly 1`] = `
-<header role="banner" class="row blue-bg">
-  <div class="banner-text align-center">
-    Made by <a href="https://davidyoung.tech" class="banner-link">https://davidyoung.tech</a></div>
-</header>
-`;
