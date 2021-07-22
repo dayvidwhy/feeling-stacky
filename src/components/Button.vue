@@ -20,6 +20,10 @@
     button:focus {
         outline: 0;
     }
+
+    @media screen and (max-width: 550px){
+        button{width: 100%;}
+    }
 </style>
 
 <template>

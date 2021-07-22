@@ -7,18 +7,25 @@
 
 <template>
     <main role="main" class="grid-container">
-        <div class="row align-center">
-            <SVGImage />
-        </div>
-        <div class="row">
+        <Row>
+            <Alignment
+                alignment="center"
+            >
+                <SVGImage />
+            </Alignment>
+        </Row>
+        <Row>
             <Type
                 text="Feeling Stacky"
                 element="h1"
                 alignment="center"
             />
-        </div>
-        <div class="row">
-            <div class="col-8 offset-2">
+        </Row>
+        <Row>
+            <Column
+                width="8"
+                offset="2"
+            >
                 <Type
                     text="What do you need to know right now?"
                     element="h3"
@@ -29,31 +36,39 @@
                     element="p"
                     alignment="center"
                 />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10 offset-1">
+            </Column>
+        </Row>
+        <Row>
+            <Column
+                width="10"
+                offset="1"
+            >
                 <Entry
                     :searchingFor="searchingFor"
                     v-on:entered="entered"
                     placeholder="Just tell me the answer to.."
                 />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3 offset-3">
+            </Column>
+        </Row>
+        <Row>
+            <Column
+                width="3"
+                offset="3"
+            >
                 <Button
                     v-on:clicked="luckySearch"
                     text="Feeling Stacky"
                 />
-            </div>
-            <div class="col-3 align-right">
+            </Column>
+            <Column
+                width="3"
+            >
                 <Button
                     v-on:clicked="seriesSearch"
                     text="Feeling Serious"
                 />
-            </div>
-        </div>
+            </Column>
+        </Row>
     </main>
 </template>
 
@@ -64,6 +79,10 @@ import Button from "@/components/Button.vue";
 import Entry from "@/components/Entry.vue";
 import Type from "@/components/Type.vue";
 
+import Row from "@/layout/Row.vue";
+import Column from "@/layout/Column.vue";
+import Alignment from "@/layout/Alignment.vue";
+
 // vuex imports
 import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
 
@@ -73,7 +92,10 @@ export default {
         "SVGImage": SVGImage,
         "Button": Button,
         "Entry": Entry,
-        "Type": Type
+        "Type": Type,
+        "Row": Row,
+        "Column": Column,
+        "Alignment": Alignment
     },
     computed: {
         ...mapState([

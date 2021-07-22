@@ -27,80 +27,10 @@ body {
     overflow: auto;
 }
 
-/*rows go in grids*/
-.row {
-    clear: both;
-    overflow: auto;
-}
-
-/*columns go in rows*/
-.col-10 {
-    width: 83.33333%;
-    float: left;
-}
-
-.col-8 {
-    width: 66.66664%;
-    float: left;
-}
-
-.col-6 {
-    width: 50%;
-    float: left;
-}
-
-.col-3 {
-    width: 25%;
-    float: left;
-}
-
-.offset-3 {
-    margin-left: 25%;
-}
-
-.offset-2 {
-    margin-left: 16.666666%;
-}
-
-.offset-1 {
-    margin-left: 8.333333%;
-}
-/*end grid*/
-
-.align-center {
-    text-align: center;
-}
-
-.align-right {
-    text-align: right;
-}
-
 /*lets shrink once we're small*/
 @media screen and (max-width: 1024px) {
     .grid-container {
         width: 95%;
         margin: auto;
     }
-}
-
-/*typical media query for phones*/
-@media screen and (max-width: 768px) {
-    h1 {font-size: 2rem;}
-    
-    h2 {font-size: 1.7rem;}
-    h3 {font-size: 1.5rem;}
-    h4 {font-size: 1.3rem;}
-    h5 {font-size: 1.2rem;}
-    .col-3 {width: 50%;}
-    .col-6 {width: 100%;}
-    .col-8 {width: 100%;}
-    .col-10 {width: 100%;}
-    .offset-1 {margin-left: 0}
-    .offset-2 {margin-left: 0}
-    .offset-3 {margin-left: 0}
-}
-
-@media screen and (max-width: 550px){
-    button{width: 100%;}
-    .col-3 {width: 100%;}
 }
