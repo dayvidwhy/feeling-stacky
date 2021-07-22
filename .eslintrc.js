@@ -7,6 +7,7 @@ module.exports = {
         "eslint:recommended",
         "plugin:vue/essential"
     ],
+    "ignorePatterns": [".eslintrc.js"],
     "parserOptions": {
         "ecmaVersion": 12,
         "sourceType": "module"
