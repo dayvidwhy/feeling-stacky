@@ -31,6 +31,16 @@
         color: #FFF;
         display: inline-block;
     }
+
+    /*typical media query for phones*/
+    @media screen and (max-width: 768px) {
+        h1 {font-size: 2rem;}
+        
+        h2 {font-size: 1.7rem;}
+        h3 {font-size: 1.5rem;}
+        h4 {font-size: 1.3rem;}
+        h5 {font-size: 1.2rem;}
+    }
 </style>
 
 <template>
