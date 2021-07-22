@@ -1,4 +1,4 @@
-# I'm Feeling Stacky
+# Feeling Stacky
 An example of multiple calls to the [StackExchange API](https://api.stackexchange.com/) to find the top answer to the most relevant question asked.
 
 ## Installation
