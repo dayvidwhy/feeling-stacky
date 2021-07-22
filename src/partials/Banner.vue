@@ -1,4 +1,18 @@
 <style>
+    .banner-text {
+        width: 100%;
+        font-size: 1.1em;
+        color: #FFF;
+        margin: 20px 0;
+    }
+
+    .banner-link {
+        color: #FFF;
+    }
+
+    .banner-link:hover {
+        color: #2ecc71;
+    }
 </style>
 
 <template>

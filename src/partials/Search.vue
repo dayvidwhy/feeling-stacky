@@ -8,55 +8,57 @@
             <SVGImage />
         </div>
         <div class="row">
-            <h1 class="align-center">
-                Feeling Stacky
-            </h1>
+            <Type
+                text="Feeling Stacky"
+                element="h1"
+                alignment="center"
+            />
         </div>
         <div class="row">
             <div class="col-8 offset-2">
-                <div class="card">
-                    <h3 class="align-center">
-                        What do you need to know right now?
-                    </h3>
-                    <p class="align-center">
-                        Do not phrase your query as a question, only include keywords.
-                    </p>
-                </div>
+                <Type
+                    text="What do you need to know right now?"
+                    element="h3"
+                    alignment="center"
+                />
+                <Type
+                    text="Do not phrase your query as a question, only include keywords."
+                    element="p"
+                    alignment="center"
+                />
             </div>
         </div>
         <div class="row">
             <div class="col-10 offset-1">
-                <div class="card">
-                    <Entry
-                        :searchingFor="searchingFor"
-                        v-on:entered="entered"
-                        placeholder="Just tell me the answer to.."
-                    />
-                </div>
+                <Entry
+                    :searchingFor="searchingFor"
+                    v-on:entered="entered"
+                    placeholder="Just tell me the answer to.."
+                />
             </div>
         </div>
         <div class="row">
-            <div class="card">
-                <div class="col-3 offset-3">
-                    <Button
-                        v-on:clicked="luckySearch"
-                        text="Feeling Stacky"
-                    />
-                </div>
-                <div class="col-3 align-right">
-                    <Button
-                        v-on:clicked="seriesSearch"
-                        text="Feeling Serious"
-                    />
-                </div>
+            <div class="col-3 offset-3">
+                <Button
+                    v-on:clicked="luckySearch"
+                    text="Feeling Stacky"
+                />
+            </div>
+            <div class="col-3 align-right">
+                <Button
+                    v-on:clicked="seriesSearch"
+                    text="Feeling Serious"
+                />
             </div>
         </div>
-        <div class="row push-down">
-            <div class="card">
-                <div class="col-10 offset-1 responses">
-                    <h4 class="response-field push-down">
-                        {{ getResponseTitle }}
-                    </h4>
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="responses">
+                    <Type
+                        :text="getResponseTitle"
+                        element="h4"
+                        alignment="left"
+                    />
                     <div class="response-field">
                         <a name="response" :href="getResponseUrl">{{ getResponseUrl }}</a>
                     </div>
@@ -74,6 +76,7 @@
 import SVGImage from "@/components/SVGImage.vue";
 import Button from "@/components/Button.vue";
 import Entry from "@/components/Entry.vue";
+import Type from "@/components/Type.vue";
 
 // vuex imports
 import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
@@ -83,7 +86,8 @@ export default {
     components: {
         "SVGImage": SVGImage,
         "Button": Button,
-        "Entry": Entry
+        "Entry": Entry,
+        "Type": Type
     },
     computed: {
         ...mapState([

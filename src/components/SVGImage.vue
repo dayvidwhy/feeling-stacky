@@ -1,5 +1,9 @@
 <style>
-
+    svg {
+        width: 20%;
+        margin-top: 10px;
+        fill: rgb(244, 165, 3);
+    }
 </style>
 
 <template>
