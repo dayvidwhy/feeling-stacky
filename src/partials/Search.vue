@@ -84,7 +84,7 @@ import Column from "@/layout/Column.vue";
 import Alignment from "@/layout/Alignment.vue";
 
 // vuex imports
-import { mapState, mapGetters, mapMutations, mapActions } from "vuex";
+import { mapState, mapMutations, mapActions } from "vuex";
 
 export default {
     name: "Searcher",
@@ -100,11 +100,6 @@ export default {
     computed: {
         ...mapState([
             "searchingFor"
-        ]),
-        ...mapGetters([
-            "getResponseTitle",
-            "getResponseUrl",
-            "getResponseField"
         ])
     },
     methods: {
