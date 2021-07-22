@@ -13,6 +13,11 @@
     .banner-link:hover {
         color: #2ecc71;
     }
+
+    /*colours*/
+    .blue-bg {
+        background-color: #2980b9;
+    }
 </style>
 
 <template>

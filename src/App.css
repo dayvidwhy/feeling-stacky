@@ -16,11 +16,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* hack for IE */
-main {
-    display: block;
-}
-
 /*grid*/
 .grid-container {
     width: 1024px;
@@ -72,36 +67,12 @@ main {
 }
 /*end grid*/
 
-.answer {
-    color: #000;
-}
-
-.responses {
-    background-color: #ecf0f1;
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-/*colours*/
-.blue-bg {
-    background-color: #2980b9;
-}
-
-.darker-bg {
-    background-color: #ecf0f1;
-}
-
 .align-center {
     text-align: center;
 }
 
 .align-right {
     text-align: right;
-}
-
-pre, code {
-    box-sizing: border-box;
-    white-space: pre-wrap;
 }
 
 /*lets shrink once we're small*/

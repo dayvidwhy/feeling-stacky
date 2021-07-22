@@ -1,5 +1,8 @@
 <style>
-
+    /* hack for IE */
+    main {
+        display: block;
+    }
 </style>
 
 <template>
@@ -49,23 +52,6 @@
                     v-on:clicked="seriesSearch"
                     text="Feeling Serious"
                 />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10 offset-1">
-                <div class="responses">
-                    <Type
-                        :text="getResponseTitle"
-                        element="h4"
-                        alignment="left"
-                    />
-                    <div class="response-field">
-                        <a name="response" :href="getResponseUrl">{{ getResponseUrl }}</a>
-                    </div>
-                    <div class="response-field"
-                        v-html="getResponseField">
-                    </div>
-                </div>
             </div>
         </div>
     </main>
