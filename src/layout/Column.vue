@@ -41,6 +41,10 @@
         .offset-2 {margin-left: 0}
         .offset-3 {margin-left: 0}
     }
+
+    @media screen and (max-width: 550px){
+        .col-3 {width: 100%;}
+    }
 </style>
 
 <template>
