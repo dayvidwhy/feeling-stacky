@@ -5,7 +5,7 @@ An example of multiple calls to the [StackExchange API](https://api.stackexchang
 1. `git clone https://github.com/dayvidwhy/feeling-stacky.git`
 2. `cd feeling-stacky`
 3. `npm install`
-4. `npm serve`
+4. `npm run start`
 
 ## Goals
 Stack Overflow presents a large amount of information when you search for something, and I think overt ime the API search functionality can be extended to consider multiple answers and give the most appropriate one for the search.
