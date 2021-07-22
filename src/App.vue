@@ -2,24 +2,24 @@
 </style>
 
 <template>
-    <div id="app">
-        <banner />
-        <searcher />
-        <credits />
+    <div>
+        <Banner />
+        <Search />
+        <Credits />
     </div>
 </template>
 
 <script>
-import banner from "./components/banner.vue";
-import searcher from "./components/searcher.vue";
-import credits from "./components/credits.vue";
+import Banner from "@/partials/Banner.vue";
+import Search from "@/partials/Search.vue";
+import Credits from "@/partials/Credits.vue";
 
 export default {
     name: "app",
     components: {
-        "banner": banner,
-        "searcher": searcher,
-        "credits": credits
+        "Banner": Banner,
+        "Search": Search,
+        "Credits": Credits
     }
 };
 </script>

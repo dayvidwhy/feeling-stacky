@@ -9,16 +9,22 @@
                 This site is not affiliated with stackexchange or any of its relevant websites.
             </div>
             <div class="tiny-text">
-                <a href="https://github.com/dayvidwhy/feeling-stacky">
-                    Source on github
-                </a>
+                <Link
+                    link="https://github.com/dayvidwhy/feeling-stacky"
+                    text="Source on github"
+                />
             </div>
         </div>
     </footer>
 </template>
 
 <script>
+import Link from "@/components/Link.vue";
+
 export default {
-    name: "credits"
+    name: "Credits",
+    components: {
+        "Link": Link
+    }
 };
 </script>

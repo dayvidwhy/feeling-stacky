@@ -170,46 +170,9 @@ h5 {
     text-align: center;
 }
 
-/*forms*/
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    font-size: 1.3em;
-    border: 1px solid #ccc;
-    font-weight: 400;
-    box-sizing: border-box;
-}
-
-button {
-    width: 98%;
-    background-color: inherit;
-    color: black;
-    padding: 14px 20px;
-    font-size: 1em;
-    border: solid 1px #2980b9;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    transition: all 0.2s ease-in-out;
-}
-
-button:hover {
-    background-color: #3498db;
-    color: #FFF;
-}
-
-button:focus {
-    outline: 0;
-}
-
 pre, code {
     box-sizing: border-box;
     white-space: pre-wrap;
-}
-
-input[type=submit]:hover {
-    background-color: blue;
 }
 
 /*lets shrink once we're small*/
