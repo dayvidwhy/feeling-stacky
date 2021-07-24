@@ -6,14 +6,6 @@
         margin: 20px 0;
     }
 
-    .banner-link {
-        color: #FFF;
-    }
-
-    .banner-link:hover {
-        color: #2ecc71;
-    }
-
     /*colours*/
     .blue-bg {
         background-color: #2980b9;

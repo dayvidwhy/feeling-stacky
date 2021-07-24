@@ -1,9 +1,15 @@
 <style>
+    .link {
+        color: #FFF;
+    }
 
+    .link:hover {
+        color: #2ecc71;
+    }
 </style>
 
 <template>
-    <a class="banner-link" :href="link">{{ text }}</a>
+    <a class="link" :href="link">{{ text }}</a>
 </template>
 
 <script>
