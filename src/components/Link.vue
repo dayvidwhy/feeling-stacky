@@ -9,7 +9,9 @@
 </style>
 
 <template>
-    <a class="link" :href="link">{{ text }}</a>
+    <a class="link" :href="link">
+        {{ text }}
+    </a>
 </template>
 
 <script>
