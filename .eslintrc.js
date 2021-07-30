@@ -1,13 +1,14 @@
 module.exports = {
+    "root": true,
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
         "eslint:recommended",
         "plugin:vue/essential"
     ],
-    "ignorePatterns": [".eslintrc.js"],
     "parserOptions": {
         "ecmaVersion": 12,
         "sourceType": "module"
