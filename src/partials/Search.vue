@@ -9,8 +9,7 @@
     <main role="main" class="grid-container">
         <Row>
             <Alignment
-                alignment="center"
-            >
+                alignment="center">
                 <SVGImage />
             </Alignment>
         </Row>
@@ -18,55 +17,45 @@
             <Type
                 text="Feeling Stacky"
                 element="h1"
-                alignment="center"
-            />
+                alignment="center" />
         </Row>
         <Row>
             <Column
                 width="8"
-                offset="2"
-            >
+                offset="2">
                 <Type
                     text="What do you need to know right now?"
                     element="h3"
-                    alignment="center"
-                />
+                    alignment="center" />
                 <Type
                     text="Do not phrase your query as a question, only include keywords."
                     element="p"
-                    alignment="center"
-                />
+                    alignment="center" />
             </Column>
         </Row>
         <Row>
             <Column
                 width="10"
-                offset="1"
-            >
+                offset="1">
                 <Entry
                     :searchingFor="searchingFor"
                     v-on:entered="entered"
-                    placeholder="Just tell me the answer to.."
-                />
+                    placeholder="Just tell me the answer to.." />
             </Column>
         </Row>
         <Row>
             <Column
                 width="3"
-                offset="3"
-            >
+                offset="3">
                 <Button
                     v-on:clicked="luckySearch"
-                    text="Feeling Stacky"
-                />
+                    text="Feeling Stacky" />
             </Column>
             <Column
-                width="3"
-            >
+                width="3">
                 <Button
                     v-on:clicked="seriesSearch"
-                    text="Feeling Serious"
-                />
+                    text="Feeling Serious" />
             </Column>
         </Row>
     </main>

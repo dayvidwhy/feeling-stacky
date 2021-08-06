@@ -9,12 +9,10 @@
         <Type
             text="This site is not affiliated with stackexchange or any of its relevant websites."
             element="p"
-            alignment="center"
-        />
+            alignment="center" />
         <Link
             link="https://github.com/dayvidwhy/feeling-stacky"
-            text="Source on github"
-        />
+            text="Source on github" />
     </footer>
 </template>
 

@@ -18,8 +18,7 @@
             Made by
             <Link
                 link="https://davidyoung.tech"
-                text="https://davidyoung.tech"
-            />
+                text="https://davidyoung.tech" />
         </div>
     </header>
 </template>

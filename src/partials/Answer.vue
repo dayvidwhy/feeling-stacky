@@ -16,10 +16,11 @@
         <Type
             :text="getResponseTitle"
             element="h4"
-            alignment="left"
-        />
+            alignment="left" />
         <div class="response-field">
-            <a name="response" :href="getResponseUrl">{{ getResponseUrl }}</a>
+            <a name="response" :href="getResponseUrl">
+                {{ getResponseUrl }}
+            </a>
         </div>
         <div class="response-field"
             v-html="getResponseField">

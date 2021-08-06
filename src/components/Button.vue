@@ -30,7 +30,7 @@
     <button
         v-on:click="clicked"
         type="button">
-        Feeling Stacky
+        {{ text }}
     </button>
 </template>
 

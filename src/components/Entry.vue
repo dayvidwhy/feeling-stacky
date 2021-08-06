@@ -21,8 +21,7 @@
         label="searcher"
         type="text"
         maxlength="124"
-        :placeholder="placeholder"
-    >
+        :placeholder="placeholder" >
 </template>
 
 <script>
