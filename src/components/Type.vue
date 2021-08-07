@@ -1,8 +1,8 @@
 <style>
-    /*start text style*/
     h1,h2,h3,h4,h5 {
         font-weight: 400;
     }
+
     h1 {
         font-size: 3rem;
         margin: 1rem;
@@ -32,10 +32,8 @@
         display: inline-block;
     }
 
-    /*typical media query for phones*/
     @media screen and (max-width: 768px) {
         h1 {font-size: 2rem;}
-        
         h2 {font-size: 1.7rem;}
         h3 {font-size: 1.5rem;}
         h4 {font-size: 1.3rem;}
