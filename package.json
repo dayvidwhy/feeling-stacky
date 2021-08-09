@@ -5,9 +5,9 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages --output .",
     "lint": "npx eslint . --ext .js,.vue",
-    "lint:fix": "npx eslint . --ext .js,.vue --fix"
+    "lint:fix": "npx eslint . --ext .js,.vue --fix",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^2.5.16",
@@ -23,6 +23,7 @@
     "eslint": "^7.31.0",
     "eslint-plugin-vue": "^7.14.0",
     "file-loader": "^6.1.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^4.4.1",
     "mini-css-extract-plugin": "^0.11.0",
     "postcss": "^7.0.32",
@@ -30,7 +31,6 @@
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
-    "vue-gh-pages": "^1.16.0",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.1",
