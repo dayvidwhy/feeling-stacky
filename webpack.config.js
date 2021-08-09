@@ -12,7 +12,7 @@ module.exports = {
     output: {
         filename: "[name].[contenthash:8].js",
         path: path.resolve(__dirname, "dist"),
-        chunkFilename: "[name].[contenthash:8].js",
+        chunkFilename: "[name].[contenthash:8].js"
     },
     module: {
         rules: [
@@ -46,7 +46,6 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: [
-                    "style-loader",
                     MiniCssExtractPlugin.loader,
                     "css-loader",
                     {
@@ -55,7 +54,7 @@ module.exports = {
                             plugins: () => [autoprefixer()],
                         },
                     },
-                    "sass-loader",
+                    "sass-loader"
                 ],
             },
         ],
@@ -65,11 +64,11 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash:8].css",
-            chunkFilename: "[name].[contenthash:8].css",
+            chunkFilename: "[name].[contenthash:8].css"
         }),
         new htmlWebpackPlugin({
             template: path.resolve(__dirname, "public", "index.html"),
-            favicon: "./public/favicon.ico",
+            favicon: "./public/favicon.ico"
         }),
     ],
     resolve: {
