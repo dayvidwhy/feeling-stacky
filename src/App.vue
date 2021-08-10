@@ -1,4 +1,21 @@
-<style src="./App.css">
+<style>
+    *, *:after, *:before {
+        box-sizing: inherit;
+    }
+
+    html {
+        font-family: sans-serif;
+        background-color: #FFF;
+        box-sizing: border-box;
+    }
+
+    /*reset body css*/
+    body {
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 </style>
 
 <template>

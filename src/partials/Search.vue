@@ -3,6 +3,19 @@
     main {
         display: block;
     }
+
+    .grid-container {
+        width: 1024px;
+        margin: auto;
+    }
+
+    /*lets shrink once we're small*/
+    @media screen and (max-width: 1024px) {
+        .grid-container {
+            width: 95%;
+            margin: auto;
+        }
+    }
 </style>
 
 <template>

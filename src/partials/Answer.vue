@@ -1,4 +1,16 @@
 <style>
+    .grid-container {
+        width: 1024px;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .grid-container {
+            width: 95%;
+            margin: auto;
+        }
+    }
+
     .responses {
         background-color: #ecf0f1;
         box-sizing: border-box;
