@@ -23,34 +23,28 @@ export default new Vuex.Store({
         SET_SEARCHING_FOR: (state, value) => {
             state.searchingFor = value;
         },
-
         // change outputs back to blanks
         RESET_OUTPUT: (state) => {
             state.response.title = "";
             state.response.field = "";
             state.response.url = "";
         },
-
         // assign the title response
         SET_TITLE: (state, title) => {
             state.response.title = title;
         },
-
         // assign the field response
         SET_FIELD: (state, field) => {
             state.response.field = field;
         },
-
         // assign the url response
         SET_URL: (state, url) => {
             state.response.url = url;
         },
-
         // set specific search type
         SET_LUCKY_SEARCH: (state) => {
             state.searchType = "q";
         },
-
         // set specific search type
         SET_SERIOUS_SEARCH: (state) => {
             state.searchType = "title";
