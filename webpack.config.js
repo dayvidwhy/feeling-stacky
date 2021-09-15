@@ -69,8 +69,30 @@ module.exports = (env, argv) => {
                 chunkFilename: "[name].[contenthash:8].css"
             }),
             new htmlWebpackPlugin({
-                template: path.resolve(__dirname, "public", "index.html"),
-                favicon: "./public/favicon.ico"
+                favicon: "./public/favicon.ico",
+                "meta": {
+                    "charset": {"charset": "utf-8"},
+                    "http-equiv": {"http-equiv": "X-UA-Compatible", "content": "IE=edge"},
+                    "viewport": "width=device-width, initial-scale=1",
+                    "description": "I'm Feeling Stacky! When you can't be bothered searching stack overflow yourself, just enter what you want to learn about, and hope you get back the right thing.",
+                    "keywords": "im, feeling, stacky",
+                    "robots": "index,follow",
+                    "property-og-title": {"property": "og:title", content: "I'm Feeling Stacky"},
+                    "property-og-description": {"property": "og:description", content: "I'm Feeling Stacky! When you can't be bothered searching stack overflow yourself, just enter what you want to learn about, and hope you get back the right thing."},
+                    "twitter:site": "dayvidwhy"
+                },
+                "title": "Feeling Stacky",
+                "templateContent": `
+                    <!DOCTYPE html>
+                    <html lang="en">
+                        <body>
+                            <noscript>
+                                <strong>We're sorry but feeling stacky doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+                            </noscript>
+                            <div id="app"></div>
+                        </body>
+                    </html>
+                `
             }),
         ],
         resolve: {
