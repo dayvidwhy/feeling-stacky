@@ -69,7 +69,16 @@ export default new Vuex.Store({
             // fetch answers
             commit("SET_TITLE", "Getting some answers!");
             fetch(query)
-                .then((response) => response.json())
+                .then((response) => {
+                    if (response.status === 302 || response.status === 404) {
+                        throw new Error();
+                    }
+                    var contentType = response.headers.get("content-type");
+                    if (contentType && contentType.indexOf("application/json") !== -1) {
+                        return response.json();
+                    }
+                    throw new Error();
+                })
                 .then((data) => {
                     // were there any responses
                     if (data.items.length <= 0) {
@@ -89,7 +98,16 @@ export default new Vuex.Store({
 
                     // fetch answer
                     fetch(answerBodyUrl)
-                        .then((response) => response.json())
+                        .then((response) => {
+                            if (response.status === 302 || response.status === 404) {
+                                throw new Error();
+                            }
+                            var contentType = response.headers.get("content-type");
+                            if (contentType && contentType.indexOf("application/json") !== -1) {
+                                return response.json();
+                            }
+                            throw new Error();
+                        })
                         .then((data) => {
                             commit("SET_FIELD", data.items[0].body);
                         })
