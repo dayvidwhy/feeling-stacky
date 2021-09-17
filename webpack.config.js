@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
         entry: {
             main: "./src/main.js",
         },
+        mode: prod ? "production" : "development",
         output: {
             filename: prod ? '[name].[contenthash:8].js' : '[name].[hash:8].js',
             path: path.resolve(__dirname, "dist"),
