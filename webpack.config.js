@@ -56,8 +56,7 @@ module.exports = (env, argv) => {
                             options: {
                                 plugins: () => [autoprefixer()],
                             },
-                        },
-                        "sass-loader"
+                        }
                     ],
                 },
             ],
