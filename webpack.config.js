@@ -13,7 +13,7 @@ module.exports = (env, argv) => {
         },
         mode: prod ? "production" : "development",
         output: {
-            filename: prod ? '[name].[contenthash:8].js' : '[name].[hash:8].js',
+            filename: '[name].[contenthash:8].js',
             path: path.resolve(__dirname, "dist"),
             chunkFilename: "[name].[contenthash:8].js"
         },
@@ -49,7 +49,7 @@ module.exports = (env, argv) => {
                 {
                     test: /\.s?css$/,
                     use: [
-                        MiniCssExtractPlugin.loader,
+                        prod ? MiniCssExtractPlugin.loader : "style-loader",
                         "css-loader",
                         {
                             loader: "postcss-loader",
@@ -104,11 +104,10 @@ module.exports = (env, argv) => {
             extensions: ["*", ".js", ".vue", ".json"],
         },
         optimization: {
-            moduleIds: "hashed",
             runtimeChunk: "single",
             splitChunks: {
                 cacheGroups: {
-                    vendor: {
+                    defaultVendors: {
                         test: /[\\/]node_modules[\\/]/,
                         name: "vendors",
                         priority: -10,
