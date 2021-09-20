@@ -1,10 +1,10 @@
-# Feeling Stacky
+# Exchange Query
 Example of multiple calls to the [StackExchange API](https://api.stackexchange.com/) to find the top answer to a query.
 
 ## Installation
 ```bash
-git clone https://github.com/dayvidwhy/feeling-stacky.git
-cd feeling-stacky
+git clone https://github.com/dayvidwhy/exchange-query.git
+cd exchange-query
 npm install
 npm run start
 ```
